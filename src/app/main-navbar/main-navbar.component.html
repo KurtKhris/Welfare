@@ -1,0 +1,23 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)] = "opened">
+    <h1 class="text-white fw-bold">
+        Dashboard
+    </h1>
+    <mat-nav-list>
+        <a mat-list-item class="text-white" href="..." > 
+            <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
+            &nbsp;Members
+        </a>
+        <a mat-list-item class="text-white" href="..." > 
+            <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
+           &nbsp;Add Member
+        </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button class="btn btn-primary" (click)="opened=!opened"><mat-icon aria-hidden="false" aria-label="Example home icon" >menu</mat-icon></button>
+
+    Main
+    
+</mat-sidenav-content>
+</mat-sidenav-container>
