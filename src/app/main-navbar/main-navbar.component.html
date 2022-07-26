@@ -1,23 +1,34 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" [(opened)] = "opened">
     <h1 class="text-white fw-bold">
-        Dashboard
+       <a mat-list-item (click)="onDashboard()" class="text-white" style="text-decoration: none;">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon>
+          &nbsp;Dashboard
+        </a> 
     </h1>
     <mat-nav-list>
-        <a mat-list-item class="text-white" href="..." > 
+        <a mat-list-item (click)="onMembers()" class="text-white"> 
             <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
             &nbsp;Members
         </a>
-        <a mat-list-item class="text-white" href="..." > 
-            <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
+        <a mat-list-item (click)="onAddMembers()" class="text-white" > 
+            <mat-icon aria-hidden="false" aria-label="Example home icon">person_add</mat-icon>
            &nbsp;Add Member
         </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button class="btn btn-primary" (click)="opened=!opened"><mat-icon aria-hidden="false" aria-label="Example home icon" >menu</mat-icon></button>
-
-    Main
+    <mat-toolbar color="primary">
+      <button class="btn btn-primary" (click)="opened=!opened"><mat-icon aria-hidden="false" aria-label="Example home icon" >menu</mat-icon></button>
+    &nbsp;<span>My App</span>
+    <span class="spacer"></span>
+    <span><button class="btn btn-danger">Logout</button></span>
+    
+  </mat-toolbar>
+    
+    <app-insight *ngIf="showInsight"></app-insight>
+    <app-members *ngIf="showMembers"></app-members>
+    <app-add-member *ngIf="showAddMembers"></app-add-member>
     
 </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,17 +1,19 @@
 <div class="content">
     <div class="mb-2 p-4">
-        <h1 class="text-white text-center">
+        <h1 class="text-white text-center time">
+            {{today | date:'h:mm a '}}
+        </h1>
+        <h1 class="text-white text-center mt-4">
             {{today | date:'fullDate'}}
-            <span class="">{{today | date:'h:mm a '}}</span>
         </h1>
     </div>
     <div class="row g-0">
     <div class="col-sm-7 text-center text-white">
         <img src="../../assets/img/cop.png" alt="">
-        <h2 class="text-uppercase fw-bold ">The Church of Pentecost</h2>
-        <h3 class="text-uppercase fw-bold">Gbegbeyise District</h3>
-        <h4 class="text-uppercase fw-bold">Mamponse Assembly</h4>
-        <h4 class="text-uppercase fw-bold">Welfare Management System</h4>
+        <h2 class="text-uppercase ">The Church of Pentecost</h2>
+        <h3 class="text-uppercase ">Gbegbeyise District</h3>
+        <h4 class="text-uppercase ">Mamponse Assembly</h4>
+        <h4 class="text-uppercase ">Welfare Management System</h4>
     </div>
     <div class="col-sm-3 login-form">
         <h4 class="text-uppercase text-white">Login</h4>
@@ -25,7 +27,7 @@
     <!-- <div class="col-sm-1"></div> -->
 </div>
 <footer>
-    <h6 class=" fixed-bottom text-center">
+    <h6 class=" fixed-bottom text-center text-white">
         Copyright &copy; {{today | date:'yyyy'}} The Church of Pentecost - Mamponse Assembly
     </h6>
 </footer>
