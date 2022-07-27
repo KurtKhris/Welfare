@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ApiService } from '../services/api.service';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { AddMemberComponent } from '../add-member/add-member.component';
 
 @Component({
   selector: 'app-members',
@@ -7,9 +13,74 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembersComponent implements OnInit {
 
-  constructor() { }
+  openDialog() {
+    this.dialog.open(AddMemberComponent, {
+      width:'30%'
+    }).afterClosed().subscribe(val=>{
+      if(val === 'save' ){
+        this.getAllMembers();
+      }
+    })
+  }
+
+  displayedColumns: string[] = ['id', 'firstName', 'middleName', 'lastName', 'address', 'phoneNumber', 'registrationDate', 'action'];
+  dataSource!: MatTableDataSource<any>;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(private api : ApiService, private dialog : MatDialog) { }
 
   ngOnInit(): void {
+    this.getAllMembers();
+  }
+
+  getAllMembers(){
+    this.api.getMembers()
+    .subscribe({
+      next:(res)=>{
+        this.dataSource = new MatTableDataSource(res);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+        // console.log(res);
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    })
+  }
+
+  editMember(row : any){
+    this.dialog.open(AddMemberComponent,{
+      width:'30%',
+      data:row
+    }).afterClosed().subscribe(val=>{
+      if(val === 'update'){
+        this.getAllMembers();
+      }
+    })
+  }
+
+  deleteMember(id:number){
+    this.api.deleteMember(id)
+    .subscribe({
+      next:(res)=>{
+        alert("Member deleted successfully");
+        this.getAllMembers();
+      },
+      error:()=>{
+        alert("Error occured while deleting member");
+      }
+    })
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
 }
