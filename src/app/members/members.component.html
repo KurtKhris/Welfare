@@ -71,6 +71,11 @@
         <button (click)="deleteMember(row.id)" mat-icon-button color="warn">
           <mat-icon>delete</mat-icon>
         </button>
+        <a routerLink="/profile/{{row.id}}">
+        <button  mat-icon-button color="accent">
+          <mat-icon>visibility</mat-icon>
+        </button>
+        </a>
       </td>
     </ng-container>
 

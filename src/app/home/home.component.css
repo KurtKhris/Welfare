@@ -29,3 +29,11 @@ h6{
 .time{
     font-size: 40pt;
 }
+
+mat-form-field{
+    width: 100%;
+}
+
+mat-label{
+    color:#fff;
+}

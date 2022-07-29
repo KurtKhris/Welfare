@@ -15,6 +15,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatDialogModule, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,10 @@ import { MembersComponent } from './members/members.component';
 import { InsightComponent } from './insight/insight.component';
 import { AddMemberComponent } from './add-member/add-member.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MemberProfileComponent } from './member-profile/member-profile.component';
+import { IdComponent } from './member-profile/id/id.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ContributionComponent } from './contribution/contribution.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,11 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     MembersComponent,
     InsightComponent,
-    AddMemberComponent
+    AddMemberComponent,
+    MemberProfileComponent,
+    IdComponent,
+    SignUpComponent,
+    ContributionComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +68,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
     
     
   ],

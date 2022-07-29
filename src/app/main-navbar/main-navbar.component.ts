@@ -10,6 +10,7 @@ export class MainNavbarComponent implements OnInit {
   showInsight = true;
   showMembers = false;
   showAddMembers= false;
+  showAddContribution= false;
   constructor() { }
 
   ngOnInit(): void {
@@ -23,18 +24,28 @@ export class MainNavbarComponent implements OnInit {
     this.showInsight = true;
     this.showAddMembers = false;
     this.showMembers = false;
+    this.showAddContribution= false;
   }
 
   onMembers(){
     this.showInsight = false;
     this.showAddMembers = false;
     this.showMembers = true;
+    this.showAddContribution= false;
   }
 
   onAddMembers(){
     this.showInsight = false;
     this.showAddMembers = true;
     this.showMembers = false;
+    this.showAddContribution= false;
+  }
+
+  onRecordContribution(){
+    this.showInsight = false;
+    this.showAddMembers = false;
+    this.showMembers = false;
+    this.showAddContribution= true;
   }
 
 }

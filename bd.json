@@ -27,6 +27,15 @@
       "phoneNumber": "24715425",
       "registrationDate": "2022-07-16T00:00:00.000Z",
       "id": 3
+    },
+    {
+      "firstName": "Kofi",
+      "middleName": "Kurt",
+      "lastName": "Kurt",
+      "address": "GA-480-1143",
+      "phoneNumber": "+233247154259",
+      "registrationDate": "2022-07-22T00:00:00.000Z",
+      "id": 4
     }
   ],
   "comments": [
