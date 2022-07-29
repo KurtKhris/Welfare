@@ -20,9 +20,7 @@ export class AddMemberComponent implements OnInit {
 
   ngOnInit(): void {
     this.memberForm = this.formBuilder.group({
-      firstName : ['',Validators.required],
-      middleName : ['',Validators.nullValidator],
-      lastName : ['',Validators.required],
+      fullName : ['',Validators.required],
       address : ['',Validators.required],
       phoneNumber : ['',Validators.required],
       registrationDate : ['',Validators.required],
@@ -30,9 +28,7 @@ export class AddMemberComponent implements OnInit {
     });
     if(this.editData){
       this.actionBtn = "Update";
-      this.memberForm.controls['firstName'].setValue(this.editData.firstName);
-      this.memberForm.controls['middleName'].setValue(this.editData.middleName);
-      this.memberForm.controls['lastName'].setValue(this.editData.lastName);
+      this.memberForm.controls['fullName'].setValue(this.editData.fullName);
       this.memberForm.controls['address'].setValue(this.editData.address);
       this.memberForm.controls['phoneNumber'].setValue(this.editData.phoneNumber);
       this.memberForm.controls['registrationDate'].setValue(this.editData.registrationDate);

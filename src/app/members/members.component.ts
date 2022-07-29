@@ -5,6 +5,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddMemberComponent } from '../add-member/add-member.component';
+import { MainNavbarComponent } from '../main-navbar/main-navbar.component';
 
 @Component({
   selector: 'app-members',
@@ -23,16 +24,21 @@ export class MembersComponent implements OnInit {
     })
   }
 
-  displayedColumns: string[] = ['id', 'firstName', 'middleName', 'lastName', 'address', 'phoneNumber', 'registrationDate', 'action'];
+  displayedColumns: string[] = ['id', 'fullName', 'address', 'phoneNumber', 'registrationDate', 'action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private api : ApiService, private dialog : MatDialog) { }
+  constructor(private api : ApiService, private dialog : MatDialog, private memberInfo : MainNavbarComponent) { }
 
   ngOnInit(): void {
     this.getAllMembers();
+    
+  }
+
+  onInfo(){
+   return this.memberInfo.onMemberProfile();
   }
 
   getAllMembers(){

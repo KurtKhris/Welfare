@@ -1,41 +1,11 @@
 {
   "members": [
     {
-      "firstName": "Kyle",
-      "middleName": "Edem",
-      "lastName": "Kpegah",
+      "fullName": "Christian Kpegah Edem",
       "address": "GA-480-1143",
       "phoneNumber": "24715425",
-      "registrationDate": "2022-07-23T00:00:00.000Z",
+      "registrationDate": "2022-07-21T00:00:00.000Z",
       "id": 1
-    },
-    {
-      "firstName": "Christian",
-      "middleName": "Edem",
-      "lastName": "Kpegah",
-      "address": "GA-480-1143",
-      "phoneNumber": "24715425",
-      "registrationDate": "2022-07-14T00:00:00.000Z",
-      "image": "C:\\fakepath\\sketch.png",
-      "id": 2
-    },
-    {
-      "firstName": "Christian",
-      "middleName": "Kwaku",
-      "lastName": "Kpegah",
-      "address": "GA-480-1143",
-      "phoneNumber": "24715425",
-      "registrationDate": "2022-07-16T00:00:00.000Z",
-      "id": 3
-    },
-    {
-      "firstName": "Kofi",
-      "middleName": "Kurt",
-      "lastName": "Kurt",
-      "address": "GA-480-1143",
-      "phoneNumber": "+233247154259",
-      "registrationDate": "2022-07-22T00:00:00.000Z",
-      "id": 4
     }
   ],
   "comments": [

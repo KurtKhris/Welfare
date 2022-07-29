@@ -16,8 +16,8 @@ export class ApiService {
     return this.http.get<any>("http://localhost:3000/members/");
   }
 
-  getMember(id : number){
-    return this.http.get<any>("http://localhost:3000/members/" +id);
+  getMember(){
+    return this.http.get<any>("http://localhost:3000/members/1/");
   }
 
   putMember(data:any, id:number){

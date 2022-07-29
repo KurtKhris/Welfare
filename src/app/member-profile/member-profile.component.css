@@ -1,0 +1,9 @@
+mat-card img{
+    width: 200px;
+    margin-top: 4%;
+    border-radius: 20px;
+}
+
+mat-card{
+    margin: 2% 30% 0 30%;
+}

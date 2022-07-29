@@ -11,6 +11,7 @@ export class MainNavbarComponent implements OnInit {
   showMembers = false;
   showAddMembers= false;
   showAddContribution= false;
+  showMemberProfile= false;
   constructor() { }
 
   ngOnInit(): void {
@@ -25,6 +26,7 @@ export class MainNavbarComponent implements OnInit {
     this.showAddMembers = false;
     this.showMembers = false;
     this.showAddContribution= false;
+    this.showMemberProfile= false;
   }
 
   onMembers(){
@@ -32,6 +34,7 @@ export class MainNavbarComponent implements OnInit {
     this.showAddMembers = false;
     this.showMembers = true;
     this.showAddContribution= false;
+    this.showMemberProfile= false;
   }
 
   onAddMembers(){
@@ -39,6 +42,7 @@ export class MainNavbarComponent implements OnInit {
     this.showAddMembers = true;
     this.showMembers = false;
     this.showAddContribution= false;
+    this.showMemberProfile= false;
   }
 
   onRecordContribution(){
@@ -46,6 +50,16 @@ export class MainNavbarComponent implements OnInit {
     this.showAddMembers = false;
     this.showMembers = false;
     this.showAddContribution= true;
+    this.showMemberProfile= false;
   }
+
+  onMemberProfile(){
+    this.showInsight = false;
+    this.showAddMembers = false;
+    this.showMembers = false;
+    this.showAddContribution= false;
+    this.showMemberProfile= true;
+  }
+
 
 }

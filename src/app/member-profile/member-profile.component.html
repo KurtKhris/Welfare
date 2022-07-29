@@ -1,1 +1,29 @@
-<p>Hello</p>
+<mat-card class="example-card">
+    <h1 class="tetx-center">Member Profile</h1>
+    <div class="member-image" [align]="'center'" >
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    </div>
+  <mat-card-content>
+    <div>
+        <h3>Name: <span>John Doe</span></h3>
+    </div>
+    <hr>
+    <div>
+        <h3>Address: <span>GA-480-1143</span></h3>
+    </div>
+    <hr>
+    <div>
+        <h3>Phone Number: <span>+1-202-555-0173</span></h3>
+    </div>
+    <hr>
+    <div>
+        <h3>Date of Registration: <span>29-07-2022</span></h3>
+    </div>
+    
+  </mat-card-content>
+  <mat-card-actions>
+    <div [align]="'center'" >
+        <button mat-raised-button color="primary">Click to view Contribution</button>
+    </div>
+  </mat-card-actions>
+</mat-card>

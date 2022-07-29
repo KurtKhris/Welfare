@@ -1,26 +1,8 @@
-<!-- <mat-card>
-    <mat-card-header>
-        <mat-card-title>Membership Form</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        
-    </mat-card-content>
-   
-</mat-card> -->
-
 <form [formGroup]="memberForm">
   <h1 mat-dialog-title>Membership Form</h1>
   <mat-form-field appearance="outline">
-    <mat-label>First Name</mat-label>
-    <input formControlName="firstName" matInput placeholder="First Name" />
-  </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Middle Name</mat-label>
-    <input formControlName="middleName" matInput placeholder="Middle Name" />
-  </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Last Name</mat-label>
-    <input formControlName="lastName" matInput placeholder="Last Name" />
+    <mat-label>Full Name</mat-label>
+    <input formControlName="fullName" matInput placeholder="Full Name" />
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Address</mat-label>

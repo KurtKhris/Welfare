@@ -20,10 +20,12 @@
         >
         &nbsp;Members
       </a>
-      <a mat-list-item (click)="onRecordContribution()" class="text-white" > 
-            <mat-icon aria-hidden="false" aria-label="Example home icon">payment</mat-icon>
-           &nbsp;Contribution
-        </a>
+      <a mat-list-item (click)="onRecordContribution()" class="text-white">
+        <mat-icon aria-hidden="false" aria-label="Example home icon"
+          >payment</mat-icon
+        >
+        &nbsp;Contribution
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -41,6 +43,7 @@
     <app-insight *ngIf="showInsight"></app-insight>
     <app-members *ngIf="showMembers"></app-members>
     <app-add-member *ngIf="showAddMembers"></app-add-member>
-    <app-contribution *ngIf="showAddContribution" ></app-contribution>
+    <app-contribution *ngIf="showAddContribution"></app-contribution>
+    <app-member-profile *ngIf="showMemberProfile"></app-member-profile>
   </mat-sidenav-content>
 </mat-sidenav-container>
