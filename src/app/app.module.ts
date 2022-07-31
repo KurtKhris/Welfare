@@ -81,7 +81,8 @@ import { SpecialContributionComponent } from './member-contribution/special-cont
   ],
   providers: [
     { provide: MAT_DIALOG_DATA, useValue: {} },
-    { provide: MatDialogRef, useValue: {} }
+    { provide: MatDialogRef, useValue: {} },
+    { provide: HomeComponent, useValue: {} },
   ],
   bootstrap: [AppComponent]
 })

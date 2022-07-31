@@ -14,7 +14,7 @@ export class InsightComponent implements OnInit {
   ngOnInit(): void {
     this.api.getMembers().subscribe(data => {
       this.countTotalMembers = data.length;
-      console.log(this.countTotalMembers);
+      // console.log(this.countTotalMembers);
     });
 
   }

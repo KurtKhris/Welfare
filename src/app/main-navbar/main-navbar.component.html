@@ -31,7 +31,7 @@
       </button>
       &nbsp;<span>Welfare Management System</span>
       <span class="spacer"></span>
-      <span><a routerLink="/home"><button mat-raised-button color="warn">Logout</button></a></span>
+      <span> {{admin}} <a routerLink="/home"><button mat-raised-button color="warn">Logout</button></a></span>
     </mat-toolbar>
     <div class="page-contents">
       <app-insight *ngIf="showInsight"></app-insight>

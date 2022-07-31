@@ -12,6 +12,10 @@ export class ApiService {
     return this.http.post<any>("http://localhost:3000/admin/", data);
   }
 
+  getAdmin(){
+    return this.http.get<any>("http://localhost:3000/admin/");
+  }
+
   getMemberContribution(){
     return this.http.get<any>("http://localhost:3000/contribution");
   }
@@ -19,10 +23,6 @@ export class ApiService {
   getSpecialContribution(){
     return this.http.get<any>("http://localhost:3000/specialcontribution");
   }
-
-  // getAdmin(){
-  //   return this.http.get<any>("http://localhost:3000/admin/");
-  // }
 
   addMember(data : any){
     return this.http.post<any>("http://localhost:3000/members/",data);

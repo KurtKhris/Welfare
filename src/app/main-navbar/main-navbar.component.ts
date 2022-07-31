@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-main-navbar',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-navbar.component.css']
 })
 export class MainNavbarComponent implements OnInit {
+  admin ="";
   opened = true;
   showInsight = true;
   showMembers = false;
@@ -13,10 +15,16 @@ export class MainNavbarComponent implements OnInit {
   showAddContribution= false;
   showMemberProfile= false;
   showMemberContribution= false;
-  constructor() { }
+  constructor(private login : HomeComponent) { }
 
   ngOnInit(): void {
+    // this.adminName();
   }
+
+  // adminName(){
+  //   console.log(this.login.signInForm.value.username);
+  // }
+  
 
   display(){
     this.showInsight=!this.showInsight
