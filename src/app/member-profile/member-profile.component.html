@@ -1,5 +1,5 @@
 <mat-card class="example-card">
-    <h1 class="tetx-center">Member Profile</h1>
+    <h1 class="text-center">Member Profile</h1>
     <div class="member-image" [align]="'center'" >
         <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
     </div>
@@ -23,7 +23,8 @@
   </mat-card-content>
   <mat-card-actions>
     <div [align]="'center'" >
-        <button mat-raised-button color="primary">Click to view Contribution</button>
+        <button (click)="onViewContribution()"mat-raised-button color="primary">Click to view Contribution</button>&nbsp;&nbsp;
+        <button (click)="openAddContribution()" mat-raised-button color="primary">Add Contribution</button>
     </div>
   </mat-card-actions>
 </mat-card>

@@ -2,8 +2,17 @@ mat-sidenav-container{
     height: 100vh;
 }
 
-mat-sidenav, mat-sidenav-content{
+mat-sidenav{
     padding: 16px;
+}
+
+mat-sidenav-content{
+    padding: 0px ;
+    overflow-x: hidden;
+}
+
+.page-contents{
+    padding: 0 16px 0 16px;
 }
 
 mat-sidenav{

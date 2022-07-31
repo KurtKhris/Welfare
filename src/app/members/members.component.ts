@@ -6,6 +6,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddMemberComponent } from '../add-member/add-member.component';
 import { MainNavbarComponent } from '../main-navbar/main-navbar.component';
+import { ContributionComponent } from '../contribution/contribution.component';
 
 @Component({
   selector: 'app-members',
@@ -21,6 +22,12 @@ export class MembersComponent implements OnInit {
       if(val === 'save' ){
         this.getAllMembers();
       }
+    })
+  }
+
+  openAddContribution(){
+    this.dialog.open(ContributionComponent,{
+      width:'30%'
     })
   }
 

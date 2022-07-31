@@ -1,6 +1,6 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" [(opened)]="opened">
-    <h1 class="text-white fw-bold">
+    <h1 class="text-white fw-bold" style="cursor:pointer;">
       <a
         mat-list-item
         (click)="onDashboard()"
@@ -20,12 +20,6 @@
         >
         &nbsp;Members
       </a>
-      <a mat-list-item (click)="onRecordContribution()" class="text-white">
-        <mat-icon aria-hidden="false" aria-label="Example home icon"
-          >payment</mat-icon
-        >
-        &nbsp;Contribution
-      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -35,15 +29,18 @@
           >menu</mat-icon
         >
       </button>
-      &nbsp;<span>My App</span>
+      &nbsp;<span>Welfare Management System</span>
       <span class="spacer"></span>
-      <span><button mat-raised-button color="warn">Logout</button></span>
+      <span><a routerLink="/home"><button mat-raised-button color="warn">Logout</button></a></span>
     </mat-toolbar>
-
-    <app-insight *ngIf="showInsight"></app-insight>
-    <app-members *ngIf="showMembers"></app-members>
-    <app-add-member *ngIf="showAddMembers"></app-add-member>
-    <app-contribution *ngIf="showAddContribution"></app-contribution>
-    <app-member-profile *ngIf="showMemberProfile"></app-member-profile>
+    <div class="page-contents">
+      <app-insight *ngIf="showInsight"></app-insight>
+      <app-members *ngIf="showMembers"></app-members>
+      <app-add-member *ngIf="showAddMembers"></app-add-member>
+      <app-contribution *ngIf="showAddContribution"></app-contribution>
+      <app-member-profile *ngIf="showMemberProfile"></app-member-profile>
+      <app-member-contribution *ngIf="showMemberContribution" ></app-member-contribution>
+    </div>
+    
   </mat-sidenav-content>
 </mat-sidenav-container>

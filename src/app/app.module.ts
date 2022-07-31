@@ -32,6 +32,9 @@ import { MemberProfileComponent } from './member-profile/member-profile.componen
 import { IdComponent } from './member-profile/id/id.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ContributionComponent } from './contribution/contribution.component';
+import { MemberContributionComponent } from './member-contribution/member-contribution.component';
+import { MonthlyContributionComponent } from './member-contribution/monthly-contribution/monthly-contribution.component';
+import { SpecialContributionComponent } from './member-contribution/special-contribution/special-contribution.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { ContributionComponent } from './contribution/contribution.component';
     MemberProfileComponent,
     IdComponent,
     SignUpComponent,
-    ContributionComponent
+    ContributionComponent,
+    MemberContributionComponent,
+    MonthlyContributionComponent,
+    SpecialContributionComponent
   ],
   imports: [
     BrowserModule,

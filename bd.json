@@ -1,21 +1,150 @@
 {
   "members": [
     {
-      "fullName": "Christian Kpegah Edem",
+      "fullName": "Christian Kpegah",
       "address": "GA-480-1143",
       "phoneNumber": "24715425",
       "registrationDate": "2022-07-21T00:00:00.000Z",
       "id": 1
-    }
-  ],
-  "comments": [
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "fullName": "Christian Kpegah",
+      "address": "GA-480-1143",
+      "phoneNumber": "24715425",
+      "registrationDate": "2021-07-30T00:00:00.000Z",
+      "id": 2
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "admin": [
+    {
+      "name": "Admin",
+      "username": "Admin",
+      "email": "christiankpegah@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 1
+    },
+    {
+      "name": "Kurt",
+      "username": "Kpegah",
+      "email": "techieszon@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123",
+      "id": 2
+    }
+  ],
+  "contribution": [
+    {
+    "paymentDate": "Jan 21, 2020",
+    "amount": "100",
+    "id": 1
+    },
+    {
+    "paymentDate": "Feb 21, 2020",
+    "amount": "100",
+    "id": 2
+    },
+    {
+    "paymentDate": "Mar 21, 2020",
+    "amount": "100",
+    "id": 3
+    },
+    {
+    "paymentDate": "Jan 21, 2021",
+    "amount": "100",
+    "id": 4
+    },
+    {
+    "paymentDate": "Feb 21, 2021",
+    "amount": "100",
+    "id": 5
+    },
+    {
+    "paymentDate": "Mar 21, 2021",
+    "amount": "100",
+    "id": 6
+    },
+    {
+    "paymentDate": "Jan 21, 2022",
+    "amount": "100",
+    "id": 7
+    },
+    {
+    "paymentDate": "Feb 21, 2022",
+    "amount": "100",
+    "id": 8
+    },
+    {
+    "paymentDate": "Mar 21, 2022",
+    "amount": "100",
+    "id": 9
+    },
+    {
+    "paymentDate": "April 21, 2023",
+    "amount": "100",
+    "id": 10
+    }
+  ],
+  "specialcontribution": [
+    {
+    "paymentDate": "Jan 21, 2020",
+    "purpose": "Mary Entsua",
+    "amount": "100",
+    "id": 1
+    },
+    {
+    "paymentDate": "Feb 21, 2020",
+    "purpose": "Ama Doe",
+    "amount": "100",
+    "id": 2
+    },
+    {
+    "paymentDate": "Mar 21, 2020",
+    "purpose": "John Doe",
+    "amount": "100",
+    "id": 3
+    },
+    {
+    "paymentDate": "Jan 21, 2021",
+    "purpose": "Naa Doe",
+    "amount": "100",
+    "id": 4
+    },
+    {
+    "paymentDate": "Feb 21, 2021",
+    "purpose": "Afi Doe",
+    "amount": "100",
+    "id": 5
+    },
+    {
+    "paymentDate": "Mar 21, 2021",
+    "purpose": "Kwame Doe",
+    "amount": "100",
+    "id": 6
+    },
+    {
+    "paymentDate": "Jan 21, 2022",
+    "purpose": "John Smith",
+    "amount": "100",
+    "id": 7
+    },
+    {
+    "paymentDate": "Feb 21, 2022",
+    "purpose": "Henry Doe",
+    "amount": "100",
+    "id": 8
+    },
+    {
+    "paymentDate": "Mar 21, 2022",
+    "purpose": "Kwaku Doe",
+    "amount": "100",
+    "id": 9
+    },
+    {
+    "paymentDate": "April 21, 2023",
+    "purpose": "Fred Doe",
+    "amount": "100",
+    "id": 10
+    }
+  ]
 }

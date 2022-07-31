@@ -1,34 +1,59 @@
-
 <form [formGroup]="signUpForm">
-    <h1>Admin Sign Up</h1>
-    <mat-form-field appearance="outline">
-        <mat-label>Full Name</mat-label>
-        <input formControlName="name" matInput placeholder="FullName">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Username</mat-label>
-        <input formControlName="username" matInput placeholder="Username">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Email</mat-label>
-        <input formControlName="email" type="email" matInput placeholder="example@mail.com">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Confirm Password</mat-label>
-        <input formControlName="confirmPassword" matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-    </mat-form-field>
-    <div [align]="'end'">
-        <button mat-raised-button color="primary" >Sign Up</button>
-    </div>
+  <h1>Admin Sign Up</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Full Name</mat-label>
+    <input formControlName="name" matInput placeholder="FullName" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input formControlName="username" matInput placeholder="Username" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input
+      formControlName="email"
+      type="email"
+      matInput
+      placeholder="example@mail.com"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input
+      formControlName="password"
+      matInput
+      [type]="hide ? 'password' : 'text'"
+    />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Confirm Password</mat-label>
+    <input
+      formControlName="confirmPassword"
+      matInput
+      [type]="hide ? 'password' : 'text'"
+    />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+  <div [align]="'end'">
+    <button (click)="signUp()" mat-raised-button color="primary">
+      Sign Up
+    </button>
+  </div>
 </form>
-

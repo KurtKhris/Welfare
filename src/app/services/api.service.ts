@@ -8,6 +8,22 @@ export class ApiService {
 
   constructor(private http : HttpClient) { }
 
+  adminSignup(data:any){
+    return this.http.post<any>("http://localhost:3000/admin/", data);
+  }
+
+  getMemberContribution(){
+    return this.http.get<any>("http://localhost:3000/contribution");
+  }
+
+  getSpecialContribution(){
+    return this.http.get<any>("http://localhost:3000/specialcontribution");
+  }
+
+  // getAdmin(){
+  //   return this.http.get<any>("http://localhost:3000/admin/");
+  // }
+
   addMember(data : any){
     return this.http.post<any>("http://localhost:3000/members/",data);
   }
@@ -16,8 +32,8 @@ export class ApiService {
     return this.http.get<any>("http://localhost:3000/members/");
   }
 
-  getMember(){
-    return this.http.get<any>("http://localhost:3000/members/1/");
+  getMember(id:number){
+    return this.http.get<any>("http://localhost:3000/members/"+id);
   }
 
   putMember(data:any, id:number){
