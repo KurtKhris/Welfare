@@ -10,7 +10,11 @@ import { MainNavbarComponent } from '../main-navbar/main-navbar.component';
   styleUrls: ['./member-profile.component.css']
 })
 export class MemberProfileComponent implements OnInit {
-
+  id = "";
+  name = "";
+  address = "";
+  phone = "";
+  registrationDate = "";
   openAddContribution(){
     this.dialog.open(ContributionComponent,{
       width:'30%'
@@ -22,6 +26,7 @@ export class MemberProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAMember();
+    
   }
 
    onViewContribution(){
@@ -32,8 +37,12 @@ export class MemberProfileComponent implements OnInit {
     this.api.getMember(1)
     .subscribe({
       next:(res)=>{
-        
-        console.log(res);
+        this.id = res.id;
+        this.name = res.fullName;
+        this.address = res.address;
+        this.phone = res.phoneNumber;
+        this.registrationDate = res.registrationDate;
+        // console.log(this.id);
       },
       error:(err)=>{
         console.log(err);
