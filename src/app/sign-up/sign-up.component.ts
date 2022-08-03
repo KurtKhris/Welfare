@@ -31,7 +31,6 @@ export class SignUpComponent implements OnInit {
           .subscribe({
             next:(res)=>{
               alert("Admin added successfully");
-              console.log(res);
               this.signUpForm.reset();
               this.dialogRef.close();
             },
