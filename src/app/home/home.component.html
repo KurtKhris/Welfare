@@ -1,11 +1,13 @@
 <div class="content">
     <div class="mb-2 p-4">
         <h1 class="text-white text-center time">
-            {{today | date:'h:mm a '}}
+            {{today | date:'h:mm:s a '}}
         </h1>
         <h1 class="text-white text-center mt-4">
             {{today | date:'fullDate'}}
         </h1>
+        <h4 class="text-white text-center"> {{greetings}} <span><img width="48" src=" {{image}} "/> </span> </h4>
+
     </div>
     <div class="row g-0">
     <div class="col-sm-7 text-center text-white">
@@ -15,19 +17,19 @@
         <h4 class="text-uppercase ">Mamponse Assembly</h4>
         <h4 class="text-uppercase ">Welfare Management System</h4>
     </div>
-    <div class="col-sm-3 login-form">
+    <div class="col-sm-3 login-form mt-3">
         <h4 class="text-uppercase text-white">Login</h4>
 
         <form [formGroup]="signInForm">
             <mat-form-field appearance="fill">
                 <mat-label >Username</mat-label>
-                <input formControlName="username" matInput >
+                <input class="text-white" formControlName="username" matInput >
             </mat-form-field>
 
             <mat-form-field appearance="fill">
                 <mat-label>Password</mat-label>
-                <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <input class="text-white" formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+                <button class="text-white" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
             </mat-form-field>
@@ -51,7 +53,7 @@
 
 </div>
 <footer>
-    <h6 class=" fixed-bottom text-center text-white">
+    <h6 class="text-center text-white">
         Copyright &copy; {{today | date:'yyyy'}} The Church of Pentecost - Mamponse Assembly
     </h6>
 </footer>

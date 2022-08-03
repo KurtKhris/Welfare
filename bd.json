@@ -31,120 +31,127 @@
       "password": "123456",
       "confirmPassword": "123",
       "id": 2
+    },
+    {
+      "name": "Kwaku",
+      "username": "Kpegah",
+      "email": "reservations@airsidehotel.com.gh",
+      "password": "1234567",
+      "id": 3
     }
   ],
   "contribution": [
     {
-    "paymentDate": "Jan 21, 2020",
-    "amount": "100",
-    "id": 1
+      "paymentDate": "Jan 21, 2020",
+      "amount": "100",
+      "id": 1
     },
     {
-    "paymentDate": "Feb 21, 2020",
-    "amount": "100",
-    "id": 2
+      "paymentDate": "Feb 21, 2020",
+      "amount": "100",
+      "id": 2
     },
     {
-    "paymentDate": "Mar 21, 2020",
-    "amount": "100",
-    "id": 3
+      "paymentDate": "Mar 21, 2020",
+      "amount": "100",
+      "id": 3
     },
     {
-    "paymentDate": "Jan 21, 2021",
-    "amount": "100",
-    "id": 4
+      "paymentDate": "Jan 21, 2021",
+      "amount": "100",
+      "id": 4
     },
     {
-    "paymentDate": "Feb 21, 2021",
-    "amount": "100",
-    "id": 5
+      "paymentDate": "Feb 21, 2021",
+      "amount": "100",
+      "id": 5
     },
     {
-    "paymentDate": "Mar 21, 2021",
-    "amount": "100",
-    "id": 6
+      "paymentDate": "Mar 21, 2021",
+      "amount": "100",
+      "id": 6
     },
     {
-    "paymentDate": "Jan 21, 2022",
-    "amount": "100",
-    "id": 7
+      "paymentDate": "Jan 21, 2022",
+      "amount": "100",
+      "id": 7
     },
     {
-    "paymentDate": "Feb 21, 2022",
-    "amount": "100",
-    "id": 8
+      "paymentDate": "Feb 21, 2022",
+      "amount": "100",
+      "id": 8
     },
     {
-    "paymentDate": "Mar 21, 2022",
-    "amount": "100",
-    "id": 9
+      "paymentDate": "Mar 21, 2022",
+      "amount": "100",
+      "id": 9
     },
     {
-    "paymentDate": "April 21, 2023",
-    "amount": "100",
-    "id": 10
+      "paymentDate": "April 21, 2023",
+      "amount": "100",
+      "id": 10
     }
   ],
   "specialcontribution": [
     {
-    "paymentDate": "Jan 21, 2020",
-    "purpose": "Mary Entsua",
-    "amount": "100",
-    "id": 1
+      "paymentDate": "Jan 21, 2020",
+      "purpose": "Mary Entsua",
+      "amount": "100",
+      "id": 1
     },
     {
-    "paymentDate": "Feb 21, 2020",
-    "purpose": "Ama Doe",
-    "amount": "100",
-    "id": 2
+      "paymentDate": "Feb 21, 2020",
+      "purpose": "Ama Doe",
+      "amount": "100",
+      "id": 2
     },
     {
-    "paymentDate": "Mar 21, 2020",
-    "purpose": "John Doe",
-    "amount": "100",
-    "id": 3
+      "paymentDate": "Mar 21, 2020",
+      "purpose": "John Doe",
+      "amount": "100",
+      "id": 3
     },
     {
-    "paymentDate": "Jan 21, 2021",
-    "purpose": "Naa Doe",
-    "amount": "100",
-    "id": 4
+      "paymentDate": "Jan 21, 2021",
+      "purpose": "Naa Doe",
+      "amount": "100",
+      "id": 4
     },
     {
-    "paymentDate": "Feb 21, 2021",
-    "purpose": "Afi Doe",
-    "amount": "100",
-    "id": 5
+      "paymentDate": "Feb 21, 2021",
+      "purpose": "Afi Doe",
+      "amount": "100",
+      "id": 5
     },
     {
-    "paymentDate": "Mar 21, 2021",
-    "purpose": "Kwame Doe",
-    "amount": "100",
-    "id": 6
+      "paymentDate": "Mar 21, 2021",
+      "purpose": "Kwame Doe",
+      "amount": "100",
+      "id": 6
     },
     {
-    "paymentDate": "Jan 21, 2022",
-    "purpose": "John Smith",
-    "amount": "100",
-    "id": 7
+      "paymentDate": "Jan 21, 2022",
+      "purpose": "John Smith",
+      "amount": "100",
+      "id": 7
     },
     {
-    "paymentDate": "Feb 21, 2022",
-    "purpose": "Henry Doe",
-    "amount": "100",
-    "id": 8
+      "paymentDate": "Feb 21, 2022",
+      "purpose": "Henry Doe",
+      "amount": "100",
+      "id": 8
     },
     {
-    "paymentDate": "Mar 21, 2022",
-    "purpose": "Kwaku Doe",
-    "amount": "100",
-    "id": 9
+      "paymentDate": "Mar 21, 2022",
+      "purpose": "Kwaku Doe",
+      "amount": "100",
+      "id": 9
     },
     {
-    "paymentDate": "April 21, 2023",
-    "purpose": "Fred Doe",
-    "amount": "100",
-    "id": 10
+      "paymentDate": "April 21, 2023",
+      "purpose": "Fred Doe",
+      "amount": "100",
+      "id": 10
     }
   ]
 }

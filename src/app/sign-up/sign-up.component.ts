@@ -20,8 +20,8 @@ export class SignUpComponent implements OnInit {
       name : ['',Validators.required],
       username : ['',Validators.required],
       email : ['',Validators.required],
-      password : ['',Validators.required],
-      confirmPassword : ['',Validators.required]
+      password : ['',Validators.required]
+      // confirmPassword : ['',Validators.required]
     });
   }
 
@@ -31,6 +31,7 @@ export class SignUpComponent implements OnInit {
           .subscribe({
             next:(res)=>{
               alert("Admin added successfully");
+              console.log(res);
               this.signUpForm.reset();
               this.dialogRef.close();
             },

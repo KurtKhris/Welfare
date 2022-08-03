@@ -9,11 +9,13 @@ export class ApiService {
   constructor(private http : HttpClient) { }
 
   adminSignup(data:any){
-    return this.http.post<any>("http://localhost:3000/admin/", data);
+    // return this.http.post<any>("http://localhost:3000/admin/", data);
+    return this.http.post<any>("https://pent-welfare.herokuapp.com/api/auth/signup", data);
   }
 
   getAdmin(){
-    return this.http.get<any>("http://localhost:3000/admin/");
+    // return this.http.get<any>("http://localhost:3000/admin/");
+    return this.http.get<any>("https://pent-welfare.herokuapp.com/api/auth/signin");
   }
 
   getMemberContribution(){

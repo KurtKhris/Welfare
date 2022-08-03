@@ -1,10 +1,16 @@
 .content{
     height: 100vh;
-    background: url('../../assets/img/domore.jpg') #2a2a2a9a;
+    background: url('../../assets/img/bg.jpg') #2a2a2a9a;
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.login-form{
+    background-color: #2a2a2a9a;
+    padding: 2%;
+    border-radius: 20px;
 }
 
 h2{
@@ -37,3 +43,9 @@ mat-form-field{
 mat-label{
     color:#fff;
 }
+
+footer{
+    padding-top: 8%;
+}
+
+
