@@ -2,7 +2,7 @@
   <h1 mat-dialog-title>Membership Form</h1>
   <mat-form-field appearance="outline">
     <mat-label>Full Name</mat-label>
-    <input formControlName="fullName" matInput placeholder="Full Name" />
+    <input formControlName="name" matInput placeholder="Full Name" />
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Address</mat-label>
@@ -15,7 +15,7 @@
   <mat-form-field appearance="outline">
     <mat-label>Date of Registration</mat-label>
     <input
-      formControlName="registrationDate"
+      formControlName="rolesDate"
       matInput
       [matDatepicker]="picker"
     />

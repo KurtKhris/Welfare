@@ -31,7 +31,7 @@ export class MembersComponent implements OnInit {
     })
   }
 
-  displayedColumns: string[] = ['id', 'fullName', 'address', 'phoneNumber', 'registrationDate', 'action'];
+  displayedColumns: string[] = ['id', 'name', 'address', 'phoneNumber', 'rolesDate', 'action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

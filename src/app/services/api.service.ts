@@ -13,9 +13,9 @@ export class ApiService {
     return this.http.post<any>("https://pent-welfare.herokuapp.com/api/auth/signup", data);
   }
 
-  getAdmin(){
+  getAdmin(data:any){
     // return this.http.get<any>("http://localhost:3000/admin/");
-    return this.http.get<any>("https://pent-welfare.herokuapp.com/api/auth/signin");
+    return this.http.post<any>("https://pent-welfare.herokuapp.com/api/auth/signin", data);
   }
 
   getMemberContribution(){
@@ -27,11 +27,12 @@ export class ApiService {
   }
 
   addMember(data : any){
-    return this.http.post<any>("http://localhost:3000/members/",data);
+    // return this.http.post<any>("http://localhost:3000/members/",data);
+    return this.http.post<any>("https://pent-welfare.herokuapp.com/api/v1/member/",data);
   }
 
   getMembers(){
-    return this.http.get<any>("http://localhost:3000/members/");
+    return this.http.get<any>("https://pent-welfare.herokuapp.com/api/v1/member/");
   }
 
   getMember(id:number){

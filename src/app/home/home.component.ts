@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
 }
 
   login(){
-    this.api.getAdmin().subscribe({
+    this.api.getAdmin(this.signInForm.value).subscribe({
       next: (data) => {
         if(data.length > 0){
           if(data[0].username == this.signInForm.value.username && data[0].password == this.signInForm.value.password){
