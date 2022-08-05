@@ -27,12 +27,16 @@ export class SignUpComponent implements OnInit {
 
   signUp(){
       if(this.signUpForm.valid){
+        console.log(this.signUpForm.value);
           this.api.adminSignup(this.signUpForm.value)
           .subscribe({
             next:(res)=>{
-              alert("Admin added successfully");
-              this.signUpForm.reset();
-              this.dialogRef.close();
+              console.log(res);
+              // if(res.status == 200){
+              //   alert("Admin added successfully");
+              //   this.signUpForm.reset();
+              //   this.dialogRef.close('save');
+              // }
             },
             error:()=>{
               alert("An error occured while adding admin")

@@ -10,7 +10,7 @@ export class ApiService {
 
   adminSignup(data:any){
     // return this.http.post<any>("http://localhost:3000/admin/", data);
-    return this.http.post<any>("https://pent-welfare.herokuapp.com/api/auth/signup", data);
+    return this.http.post<any>("https://pent-welfare.herokuapp.com/api/auth/signup/", data);
   }
 
   getAdmin(data:any){
