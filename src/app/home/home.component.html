@@ -23,7 +23,7 @@
         <form [formGroup]="signInForm">
             <mat-form-field appearance="fill">
                 <mat-label >Username</mat-label>
-                <input class="text-white" formControlName="username" matInput >
+                <input class="text-white" formControlName="usernameOrEmail" matInput >
             </mat-form-field>
 
             <mat-form-field appearance="fill">
@@ -40,6 +40,10 @@
         </form>
             <div [align]="'end'">
                 <button class="mt-3" mat-raised-button color="warn" (click)="openDialog()">Sign Up</button>
+            </div>
+
+            <div class="text-white">
+                {{ signInForm.value | json }}
             </div>
         
 
