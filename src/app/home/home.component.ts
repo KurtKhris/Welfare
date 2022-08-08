@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.signInForm = this.formBuilder.group({
-      username : ['',Validators.required],
+      usernameOrEmail : ['',Validators.required],
       password : ['',Validators.required],
     })
 
@@ -55,18 +55,30 @@ export class HomeComponent implements OnInit {
 
   login(){
     this.api.getAdmin(this.signInForm.value).subscribe({
-      next: (data) => {
-        if(data.length > 0){
-          if(data[0].username == this.signInForm.value.username && data[0].password == this.signInForm.value.password){
-            // this.name = data.username;
-            console.log(this.signInForm.value.username);
-            this.router.navigate(['/dashboard']);
-          }else{
-          alert("Invalid username or password");
+      next:(res)=>{
+        console.log(res);
+        if(res.status == 200){
+          this.router.navigate(['/dashboard']);
         }
+        else{
+          alert("Invalid credentials");
         }
       }
     })
+    // this.api.getAdmin(this.signInForm.value).subscribe({
+    //   next: (data) => {
+    //     console.log(data);
+    //     this.router.navigate(['/dashboard']);
+    //     if(data.length > 0){
+    //       if(data[0].usernameOrEmail == this.signInForm.value.usernameOrEmail && data[0].password == this.signInForm.value.password){
+            
+            
+    //       }else{
+    //       alert("Invalid username or password");
+    //     }
+    //     }
+    //   }
+    // })
   }
 
 
