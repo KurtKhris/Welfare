@@ -12,10 +12,10 @@ export class InsightComponent implements OnInit {
   constructor(private api : ApiService) { }
 
   ngOnInit(): void {
-    this.api.getMembers().subscribe(data => {
-      this.countTotalMembers = data.length;
-      // console.log(this.countTotalMembers);
-    });
+    // this.api.getMembers().subscribe(data => {
+    //   this.countTotalMembers = data.length;
+    //   console.log(this.countTotalMembers);
+    // });
 
   }
 

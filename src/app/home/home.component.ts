@@ -18,7 +18,9 @@ export class HomeComponent implements OnInit {
   signInForm !: FormGroup;
   name ="";
   image : any;
-  constructor(private dialog : MatDialog, private formBuilder : FormBuilder, private router : Router, private api : ApiService) { }
+  constructor(private dialog : MatDialog, private formBuilder : FormBuilder, private router : Router, private api : ApiService) { 
+    this.save();
+  }
 
   openDialog(){
     this.dialog.open(SignUpComponent, {
@@ -27,11 +29,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.signInForm = this.formBuilder.group({
-      usernameOrEmail : ['',Validators.required],
-      password : ['',Validators.required],
-    })
-
     setInterval(() => {
     this.today = Date.now();
   }, 1000);
@@ -53,16 +50,22 @@ export class HomeComponent implements OnInit {
 
 }
 
+save(){
+  this.signInForm = this.formBuilder.group({
+      usernameOrEmail : ['',Validators.required],
+      password : ['',Validators.required],
+    })
+}
+
   login(){
     this.api.getAdmin(this.signInForm.value).subscribe({
       next:(res)=>{
         console.log(res);
-        if(res.status == 200){
-          this.router.navigate(['/dashboard']);
-        }
-        else{
-          alert("Invalid credentials");
-        }
+        alert("Login Successful")
+        this.router.navigate(['/dashboard']);
+      },
+      error:()=>{
+        alert("Login Unsuccessful")
       }
     })
     // this.api.getAdmin(this.signInForm.value).subscribe({

@@ -37,9 +37,12 @@ export class ApiService {
     return throwError(errorMessage);
  }
 
-  getAdmin(data:any){
+  getAdmin(data:any): Observable<any>{
     // return this.http.get<any>("http://localhost:3000/admin/");
-    return this.http.post<any>("https://pent-welfare.herokuapp.com/api/auth/signin", data);
+    return this.http.post<any>("https://pent-welfare.herokuapp.com/api/auth/signin", data,this.httpOptions)
+    .pipe(
+      catchError(this.errorHandler)
+    )
   }
 
   getMemberContribution(){

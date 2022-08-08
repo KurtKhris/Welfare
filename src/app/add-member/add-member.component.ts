@@ -43,6 +43,7 @@ export class AddMemberComponent implements OnInit {
       this.api.addMember(this.memberForm.value)
       .subscribe({
         next:(res)=>{
+          console.log(res);
           alert("Member added successfully");
           this.memberForm.reset();
           this.dialogRef.close('save');
