@@ -37,11 +37,12 @@ export class SignUpComponent implements OnInit {
           .subscribe({
             next:(res)=>{
               console.log(res);
-              if(res.status == 200){
-                console.log("Admin added successfully");
-                this.signUpForm.reset();
-                this.dialogRef.close('save');
-              }
+              alert("Signup Successful")
+              this.signUpForm.reset();
+              this.dialogRef.close('save');
+            },
+            error:()=>{
+              alert("Signup Unsuccessful")
             }
           })
          }
