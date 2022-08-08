@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders,HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { catchError, Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +8,34 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(private http : HttpClient) { }
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      "Access-Control-Allow-Origin": "*",
 
-  adminSignup(data:any){
+    } ),responseType: 'text' as 'json'
+  };
+
+  adminSignup(data:any): Observable<any>{
     // return this.http.post<any>("http://localhost:3000/admin/", data);
-    return this.http.post<any>("https://pent-welfare.herokuapp.com/api/auth/signup", data);
+    return this.http.post("https://pent-welfare.herokuapp.com/api/auth/signup", data,this.httpOptions)
+    .pipe(
+      catchError(this.errorHandler)
+    )
   }
+
+  errorHandler(error:any) {
+    let errorMessage = '';
+    if(error.error instanceof ErrorEvent) {
+      // Get client-side error
+      errorMessage = error.error.message;
+    } else {
+      // Get server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    console.log(errorMessage);
+    return throwError(errorMessage);
+ }
 
   getAdmin(data:any){
     // return this.http.get<any>("http://localhost:3000/admin/");
@@ -28,7 +52,7 @@ export class ApiService {
 
   addMember(data : any){
     // return this.http.post<any>("http://localhost:3000/members/",data);
-    return this.http.post<any>("https://pent-welfare.herokuapp.com/api/v1/member/",data);
+    return this.http.post("https://pent-welfare.herokuapp.com/api/v1/member/",data,this.httpOptions);
   }
 
   getMembers(){
@@ -40,7 +64,7 @@ export class ApiService {
   }
 
   putMember(data:any, id:number){
-    return this.http.put<any>("http://localhost:3000/members/" +id, data);
+    return this.http.put<any>("http://localhost:3000/members/" +id, data,this.httpOptions);
   }
 
   deleteMember(id:number){
