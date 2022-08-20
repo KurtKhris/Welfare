@@ -16,6 +16,19 @@ export class ApiService {
     } ),responseType: 'text' as 'json'
   };
 
+  public login(usernameOrEmail: string, password: string){
+    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(usernameOrEmail + ':' + password)});
+    return this.http.get("https://pent-welfare.herokuapp.com/api/auth/signin", {headers, responseType: 'text' as 'json'});
+  }
+
+
+  public getAllMembers(){
+    let usernameOrEmail = localStorage.getItem('usernameOrEmail');
+    let password = localStorage.getItem('password');
+    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(usernameOrEmail + ':' + password)});
+    return this.http.get<any>("https://pent-welfare.herokuapp.com/api/v1/member/", {headers});
+  }
+
   adminSignup(data:any): Observable<any>{
     // return this.http.post<any>("http://localhost:3000/admin/", data);
     return this.http.post("https://pent-welfare.herokuapp.com/api/auth/signup", data,this.httpOptions)

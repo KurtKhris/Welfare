@@ -84,5 +84,15 @@ save(){
     // })
   }
 
+  doLogin(){
+    this.api.login(this.signInForm.value.usernameOrEmail, this.signInForm.value.password).subscribe({
+      next:(res)=>{
+        console.log(res);
+        alert("Login Successful")
+        this.router.navigate(['/dashboard']);
+      }
+    })
+  }
+
 
 }
