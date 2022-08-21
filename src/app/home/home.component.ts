@@ -58,41 +58,24 @@ save(){
 }
 
   login(){
-    this.api.getAdmin(this.signInForm.value).subscribe({
-      next:(res)=>{
-        console.log(res);
-        alert("Login Successful")
-        this.router.navigate(['/dashboard']);
-      },
-      error:()=>{
-        alert("Login Unsuccessful")
-      }
-    })
-    // this.api.getAdmin(this.signInForm.value).subscribe({
-    //   next: (data) => {
-    //     console.log(data);
-    //     this.router.navigate(['/dashboard']);
-    //     if(data.length > 0){
-    //       if(data[0].usernameOrEmail == this.signInForm.value.usernameOrEmail && data[0].password == this.signInForm.value.password){
-            
-            
-    //       }else{
-    //       alert("Invalid username or password");
-    //     }
-    //     }
-    //   }
-    // })
+         if(this.signInForm.valid){
+          this.api.adminSignin(this.signInForm.value)
+          .subscribe({
+            next:(res)=>{
+              console.log(res);
+              alert("Login Successful")
+              this.router.navigate(['/dashboard']);
+            },
+            error:()=>{
+              alert("Login Unsuccessful")
+            }
+          })
+         }
   }
 
-  doLogin(){
-    this.api.login(this.signInForm.value.usernameOrEmail, this.signInForm.value.password).subscribe({
-      next:(res)=>{
-        console.log(res);
-        alert("Login Successful")
-        this.router.navigate(['/dashboard']);
-      }
-    })
-  }
+  // dologin(){
+  //   console.log(this.signInForm.value);
+  // }
 
 
 }
